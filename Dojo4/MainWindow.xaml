@@ -5,8 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dojo4"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="508*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Height="30" Width="80" Margin="5" Content="Start"></Button>
+            <Button Height="30" Width="80" Margin="5" Content="Stop"></Button>
+        </StackPanel>
+       
+
+
+        <TabControl Grid.Row="1">
+            <TabItem Header="Chat">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="235*"/>
+                        <ColumnDefinition Width="551*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Orientation="Vertical">
+                        <Label> Connected User: </Label>
+                        <DataGrid>
+                           
+                        </DataGrid>
+                    </StackPanel>
+                </Grid>   
+            </TabItem>
+            
+            
+            <TabItem Header="Logs">
+                
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>
